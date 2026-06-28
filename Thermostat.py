@@ -41,7 +41,7 @@
 #------------------------------------------------------------------
 # Version   |   Description
 #------------------------------------------------------------------
-#    1          Initial Development
+#    3          Prototype Submission
 #------------------------------------------------------------------
 
 ##
@@ -407,10 +407,10 @@ class TemperatureMachine(StateMachine):
                 print("Processing Display Info...")
     
             ## Grab the current time        
-            current_time = datetime.now()
+            current_time = datetime.now().strftime('%b %d  %H:%M:%S\n')
     
             ## Setup display line 1
-            lcd_line_1 = datetime.now().strftime('%b %d  %H:%M:%S\n')
+            lcd_line_1 = current_time
     
             ## Setup Display Line 2
             if(altCounter < 6):
